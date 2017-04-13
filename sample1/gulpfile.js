@@ -13,11 +13,11 @@ var jsSrc=['*/*.js','app/*/*.js'];
 
 //CSS生成文件hash编码并生成 rev-manifest.json文件名对照映射
 gulp.task('revCss', function(){
-    return gulp.src(cssSrc)
-        .pipe(rev()) 
+    return gulp.src(cssSrc)				//-使用数组的方式来匹配多种文件
+        .pipe(rev()) 					//- 文件名加MD5后缀
 		//.pipe(gulp.dest('dist/css'))   将文件发布到指定目录
-        .pipe(rev.manifest())
-        .pipe(gulp.dest('rev/css'));
+        .pipe(rev.manifest())			//- 生成一个rev-manifest.json
+        .pipe(gulp.dest('rev/css'));	//- 将 rev-manifest.json 保存到 rev 目录内
 });
 
 
@@ -34,8 +34,8 @@ gulp.task('revJs', function(){
 //Html替换css、js文件版本
 gulp.task('revHtml', function () {
     return gulp.src(['rev/**/*.json', 'index.html'])
-        .pipe(revCollector())
-        .pipe(gulp.dest(''));
+        .pipe(revCollector())	//- 执行文件内css,js名的替换
+        .pipe(gulp.dest(''));	//- 替换后的文件输出的目录
 });
 
 
