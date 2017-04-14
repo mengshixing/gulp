@@ -16,3 +16,19 @@ two method of use gulp handle (css/js)
    
    参考了https://segmentfault.com/a/1190000006204457 文章
 
+二.第二种是给资源文件加上版本号后缀,如下所示
+
+	<link rel="stylesheet" href="css/bootstrap-ec3bb52a00.min.css">
+	
+使用方法：
+
+1 下载包
+
+npm install --save-dev gulp
+npm install --save-dev gulp-rev
+npm install --save-dev gulp-rev-collector
+npm install --save-dev run-sequence
+npm install --save-dev gulp-concat
+npm install --save-dev gulp-uglify
+
+2 将sample2中的内容（gulpfile.js,package.json）拷贝到项目根目录,执行任务即可
