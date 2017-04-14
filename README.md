@@ -25,10 +25,15 @@ two method of use gulp handle (css/js)
 1 下载包
 
 npm install --save-dev gulp
+
 npm install --save-dev gulp-rev
+
 npm install --save-dev gulp-rev-collector
+
 npm install --save-dev run-sequence
+
 npm install --save-dev gulp-concat
+
 npm install --save-dev gulp-uglify
 
 2 将sample2中的内容（gulpfile.js,package.json）拷贝到项目根目录,执行任务即可
