@@ -37,3 +37,5 @@ npm install --save-dev gulp-concat
 npm install --save-dev gulp-uglify
 
 2 将sample2中的内容（gulpfile.js,package.json）拷贝到项目根目录,执行任务即可
+
+参考了http://www.cnblogs.com/2050/p/4198792.html  文章
